@@ -1,0 +1,12 @@
+name: practice git action
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "push complete!"
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
