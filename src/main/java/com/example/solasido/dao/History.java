@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class History {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int historyId;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
