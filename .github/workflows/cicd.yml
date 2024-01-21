@@ -24,7 +24,7 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           token: ${{ secrets.ACTION_TOKEN }}
-          submodules: recursive #true는 안 됨
+          submodules: true #true는 안 됨
 
       - name: Check submodule
         run: |
