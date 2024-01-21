@@ -2,8 +2,7 @@ version: "3.7"
 
 services:
   spring:
-#    image: jaehyeon1114/solasido:2
-    build: .
+    image: jaehyeon1114/solasido:2
     ports:
       - "8080:8080" #expose는 컨테이너 내부 포트만 열어둠.
     container_name: spring
