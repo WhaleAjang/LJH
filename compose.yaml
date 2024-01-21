@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   spring:
-    image: jaehyeon1114/solasido:2
+    image: jaehyeon1114/solasido:latest
     ports:
       - "8080:8080" #expose는 컨테이너 내부 포트만 열어둠.
     container_name: spring
