@@ -95,5 +95,4 @@ jobs:
           host: ${{ secrets.HOST }} # EC2 퍼블릭 IPv4 DNS
           username: ${{ secrets.USER }} #ip 주소로 변경
           script: |
-            docker-compose down
-            docker-compose up -d
+            sudo docker-compose up -d
