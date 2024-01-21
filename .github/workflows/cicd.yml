@@ -27,7 +27,7 @@ jobs:
 
       - name: Check submodule
         run: |
-          cat src/main/resources/static/dfdf
+          cat ./src/main/resources/static/dfdf
 
 
 
