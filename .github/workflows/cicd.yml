@@ -86,3 +86,14 @@ jobs:
 #            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/docker-test-prod
 #            sudo docker run -d -p 8082:8082 ${{ secrets.DOCKER_USERNAME }}/docker-test-prod
 #            sudo docker image prune -f
+
+
+      - name: Pull and restart Docker Container #aws 권한 설정 #key 설정6
+        uses: appleboy/ssh-action@master
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.HOST }} # EC2 퍼블릭 IPv4 DNS
+          username: ${{ secrets.USER }} #ip 주소로 변경
+          script: |
+            docker-compose down
+            docker-compose up -d
