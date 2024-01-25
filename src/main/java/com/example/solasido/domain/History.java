@@ -1,4 +1,4 @@
-package com.example.solasido.dao;
+package com.example.solasido.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
