@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String test() {
         return "EC2 배포 테스트";
     }
