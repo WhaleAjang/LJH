@@ -13,7 +13,7 @@ services:
     image: jaehyeon1114/solasido:latest
     expose:
       - "8080" #expose는 컨테이너 내부 포트만 열어둠.
-    container_name: spring-history
+    container_name: spring-user
     networks:
       - user_network
 
