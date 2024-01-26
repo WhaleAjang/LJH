@@ -1,14 +1,21 @@
 version: "3.7"
 
 services:
-  spring:
+  spring-history:
     image: jaehyeon1114/solasido:latest
     expose:
       - "8080" #expose는 컨테이너 내부 포트만 열어둠.
-    container_name: spring
+    container_name: spring-history
     networks:
-      - web_network
+      - history_network
 
+  spring-user:
+    image: jaehyeon1114/solasido:latest
+    expose:
+      - "8080" #expose는 컨테이너 내부 포트만 열어둠.
+    container_name: spring-history
+    networks:
+      - user_network
 
   nginx:
     image: nginx
@@ -22,8 +29,11 @@ services:
     depends_on:
       - spring
     networks:
-      - web_network
+      - history_network
+      - user_network
 
 networks:
-  web_network:
+  history_network:
+    driver: bridge
+  user_network:
     driver: bridge
